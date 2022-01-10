@@ -1,0 +1,186 @@
+.navbar {
+    text-align: center;
+    border: 2px solid gray;
+    background-color: #4fc1e9;
+    color: white;
+}
+
+.books-container {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+}
+
+.book {
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 250px;
+    height: 330px;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 30px;
+}
+
+.book h3,
+h5 {
+    margin: 7px;
+}
+
+.book h3 {
+    min-height: 50px;
+}
+
+.book h5 {
+    min-height: 36px;
+}
+
+.book img {
+    margin-top: 8px;
+    width: 130px;
+    height: 160px;
+}
+
+.search-form {
+    margin-top: 15px;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.search-form input {
+    width: 85%;
+    height: 29.6px;
+    font-size: 1.45rem;
+}
+
+.search-form button {
+    width: 55px;
+    font-size: 1.25rem;
+}
+
+.search-form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.rec-btn {
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #4fc1e9;
+    color: white;
+    border: 2px solid gray;
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.rec-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.detail-btn {
+    width: 100%;
+    font-size: 1.1rem;
+    border: 1px solid #4fc1e9;
+    background: none;
+    color: #4fc1e9;
+    margin-top: 10px;
+}
+
+.detail-btn:hover {
+    background-color: #4fc1e9;
+    color: white;
+    cursor: pointer;
+}
+
+.popup {
+    background-color: #4fc1e9;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin: 0;
+    padding: 10px;
+}
+
+.book-modal img {
+    width: 180px;
+    height: 250px;
+}
+
+.book-modal h3 {
+    font-size: 1.3rem;
+    margin: 5px;
+}
+
+.book-modal h5 {
+    font-size: 1rem;
+    color: rgb(32, 53, 53);
+}
+
+.book-modal a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #4fc1e9;
+}
+
+.close-btn {
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.book-modal {
+    text-align: center;
+}
+
+.book-modal img {
+    width: 180px;
+    height: 250px;
+}
+
+.book-modal h3 {
+    font-size: 1.3rem;
+    margin: 5px;
+    color: white;
+}
+
+.book-modal h5 {
+    font-size: 1rem;
+    color: rgb(32, 53, 53);
+}
+
+.book-modal a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.close-btn {
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .books-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .books-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
