@@ -36,7 +36,7 @@ const ShowModal = ({ books }) => {
                     </h3>
                     <div className="book-modal">
                         <img
-                            src={books[0].volumeInfo.imageLinks.thumbnail}
+                            src={books[0].volumeInfo.imageLinks.smallThumbnail}
                             alt={books[0].volumeInfo.title}
                         />
                         <h3 style={{ color: "black" }}>

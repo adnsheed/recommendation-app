@@ -8,6 +8,7 @@ const API_KEY = "AIzaSyDCtgzRKX0lMhORlIH9uGx73supItMO53k";
 const Books = () => {
     const [books, setBooks] = useState([]);
     const [title, setTitle] = useState(true);
+    const [error, setError] = useState("");
 
     const getBooks = (value) => {
         axios
@@ -15,11 +16,16 @@ const Books = () => {
                 `https://www.googleapis.com/books/v1/volumes?q=${value}&key=${API_KEY}`
             )
             .then((response) => {
-                setBooks(response.data.items);
-                // return response.data.items;
+                if (response.data.items === undefined) {
+                    throw Error("No books found :(");
+                } else {
+                    setBooks(response.data.items);
+                    setError("");
+                }
             })
-            .catch((reason) => {
-                console.log(reason);
+            .catch((err) => {
+                setError(err.message);
+                setBooks([]);
             });
     };
 
@@ -43,10 +49,12 @@ const Books = () => {
                 </form>
             </div>
             {title && (
-                <button className="rec-btn">
+                <button className="rec2-btn" disabled={true}>
                     Search the books and chose recommended
                 </button>
             )}
+
+            {error && <div className="err">{error}</div>}
 
             {show() && <ShowModal books={books} />}
 
