@@ -1,6 +1,6 @@
 # Book Recommendation
 
-<img src="frontend\src\images\br_preview.png" alt="BR" >
+<img src="\src\images\br_preview.png" alt="BR" >
 
 ## Description
 
