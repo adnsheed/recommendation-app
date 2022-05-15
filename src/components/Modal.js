@@ -36,17 +36,17 @@ const ShowModal = ({ books }) => {
                     </h3>
                     <div className="book-modal">
                         <img
-                            src={books[0].volumeInfo.imageLinks.smallThumbnail}
-                            alt={books[0].volumeInfo.title}
+                            src={books.volumeInfo.imageLinks.smallThumbnail}
+                            alt={books.volumeInfo.title}
                         />
                         <h3 style={{ color: "black" }}>
                             {" "}
-                            {books[0].volumeInfo.title}
+                            {books.volumeInfo.title}
                         </h3>
-                        <h5>{books[0].volumeInfo.authors}</h5>
-                        <h5>Page Count: {books[0].volumeInfo.pageCount}</h5>
+                        <h5>{books.volumeInfo.authors}</h5>
+                        <h5>Page Count: {books.volumeInfo.pageCount}</h5>
                         <a
-                            href={books[0].volumeInfo.canonicalVolumeLink}
+                            href={books.volumeInfo.canonicalVolumeLink}
                             target="_blank"
                             rel="noreferrer"
                             style={{ color: "#4fc1e9" }}

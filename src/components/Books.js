@@ -56,7 +56,11 @@ const Books = () => {
 
             {error && <div className="err">{error}</div>}
 
-            {show() && <ShowModal books={books} />}
+            {show() && (
+                <ShowModal
+                    books={books[Math.floor(Math.random() * books.length)]}
+                />
+            )}
 
             <div className="books-container">
                 {books &&

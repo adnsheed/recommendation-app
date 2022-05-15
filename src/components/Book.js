@@ -10,8 +10,6 @@ const Book = ({ book }) => {
         }
     }
 
-    console.log(showPic());
-
     return (
         <div className="book">
             <img src={showPic()} alt={book.volumeInfo.title} />
